@@ -8,6 +8,7 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import VueSession from 'vue-session'
 
+
 Vue.use(Vuetify, {
   icons: {
     iconfont: 'md'

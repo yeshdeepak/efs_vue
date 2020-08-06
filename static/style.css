@@ -1,0 +1,9 @@
+body {
+  background-image: url('@/assets/images/background.jpg') ;
+}
+  
+
+.card-image
+{
+height:100%
+}

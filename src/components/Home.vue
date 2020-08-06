@@ -1,19 +1,18 @@
 <template>
-<div       class="card-image"
- :style="{'background-image': 'url(' + require('@/assets/images/background.jpg') + ')'}">
 
   <main>
     <br/>
     <v-container fluid ma-0 pa-0 fill-height>
       <v-layout column align-center>
-        <blockquote>
-          &#8220;Welcome {{validUserName}}!&#8221;
-          <footer>
-            <small>
-              <em>&mdash;Eagle Financial Services, your Midwest Financial Services Partner.</em>
-            </small>
-          </footer>
-        </blockquote>
+        <v-card  class="mx-auto" color="#26c6da" dark max-width="800">  
+          <v-card-title>
+            <v-icon large  left > mdi-twitter </v-icon>
+              <span class="title font-weight-bold">Welcome {{validUserName}}!</span>
+          </v-card-title>
+         <v-card-text class="headline font-weight-light">
+          "Eagle Financial Services, your Midwest Financial Services Partner."
+         </v-card-text>
+        </v-card >
 
       </v-layout>
     </v-container>
@@ -69,7 +68,7 @@
       </v-layout>
     </v-container>
   </main>
-  </div>
+  
 </template>
 
 <script>

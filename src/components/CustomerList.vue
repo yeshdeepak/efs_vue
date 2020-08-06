@@ -3,14 +3,14 @@
     <br/>
     <v-container fluid grid-list-md>
       <v-layout column align-left>
-        <blockquote>
-         Welcome {{validUserName}}!
-          <footer>
-            <small>
-              <em>&mdash;Eagle Financial Services, your Midwest Financial Services Partner.</em>
-            </small>
-          </footer>
-        </blockquote>
+          <v-card  class="mx-auto" color="#26c6da" dark max-width="800">  
+            <v-card-title>
+                <span class="title font-weight-bold">Welcome {{validUserName}}!</span>
+            </v-card-title>
+          <v-card-text class="headline font-weight-light">
+            "Eagle Financial Services, your Midwest Financial Services Partner."
+          </v-card-text>
+          </v-card >
       </v-layout>
 
        <v-layout column align-center>
@@ -153,10 +153,13 @@
       },
       deleteCustomer(customer) {
         apiService.deleteCustomer(customer.pk).then(response => {
-          if (response.status === 204) {
+          if (response.status === 204) {            
+            if (this.customers.indexOf(customer) > -1) {
+              this.customers.splice(this.customers.indexOf(customer), 1);
+            }
             alert("Customer deleted");
             this.showMsg = 'deleted';
-            this.$router.go();
+            router.push("/customer-list");
           }
         }).catch(error => {
           if (error.response.status === 401) {
@@ -168,5 +171,5 @@
         });
       }
     }
-  };
+  };  
 </script>

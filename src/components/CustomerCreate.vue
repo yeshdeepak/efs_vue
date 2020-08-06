@@ -41,7 +41,7 @@
                 />
                 <v-text-field
                   v-model="customer.address"
-                  label="Address"
+                  label=<b>"Address"</b>
                   required
                 />
                 <v-text-field

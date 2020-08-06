@@ -1,10 +1,16 @@
+
 <template>
 
-  <v-app>
-    <div  class="card-image" :style="{'background-image': 'url(' + require('@/assets/images/background.jpg') + ')'}">
+  
 
-    <v-toolbar class="blue">
-      <v-toolbar-title>Eagle Finance Service</v-toolbar-title>
+  <v-app >
+          <div       class="fill-height bg-image"
+ :style="{'background-image': 'url(' + require('@/assets/images/background.jpg') + ')',   backgroundSize: 'cover',
+}">
+
+ 
+      <v-toolbar class="grey">
+      <v-toolbar-title >Eagle Finance Service</v-toolbar-title>
       <v-toolbar-items>
         <v-btn flat dark @click="goHome">Home</v-btn>
         <v-btn flat dark @click="viewCustomers">Customers</v-btn>
@@ -21,11 +27,15 @@
     <v-content>
 
       <router-view/>
-    </v-content>
-      </div>
+    </v-content>                           
+       </div>
+
 
   </v-app>
+
 </template>
+
+
 
 <script>
   import router from './router';
@@ -81,4 +91,8 @@
       }
     }
   };
+
+  
 </script>
+
+

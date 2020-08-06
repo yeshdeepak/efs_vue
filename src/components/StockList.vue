@@ -3,14 +3,15 @@
     <br/>
     <v-container fluid grid-list-md>
       <v-layout column align-left>
-        <blockquote>
-         Welcome {{validUserName}}!
-          <footer>
-            <small>
-              <em>&mdash;Eagle Financial Services, your Midwest Financial Services Partner.</em>
-            </small>
-          </footer>
-        </blockquote>
+        <v-card  class="mx-auto" color="#26c6da" dark max-width="800">  
+          <v-card-title>
+              <span class="title font-weight-bold">Welcome {{validUserName}}!</span>
+          </v-card-title>
+         <v-card-text class="headline font-weight-light">
+          "Eagle Financial Services, your Midwest Financial Services Partner."
+         </v-card-text>
+        </v-card >
+
       </v-layout>
 
        <v-layout column align-center>
@@ -147,10 +148,13 @@
       deleteStock(stock) {
         apiService.deleteStock(stock.pk).then(response => {
           if (response.status === 204) {
+            if (this.stocks.indexOf(stock) > -1) {
+              this.stocks.splice(this.stocks.indexOf(stock), 1);
+            }
             alert("Stock deleted");
             this.showMsg = 'deleted';
             this.$router.go();
-          }
+}
         }).catch(error => {
           if (error.response.status === 401) {
             localStorage.removeItem('isAuthenticates');
