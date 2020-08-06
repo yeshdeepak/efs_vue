@@ -1,6 +1,8 @@
 <template>
 
   <v-app>
+    <div  class="card-image" :style="{'background-image': 'url(' + require('@/assets/images/background.jpg') + ')'}">
+
     <v-toolbar class="blue">
       <v-toolbar-title>Eagle Finance Service</v-toolbar-title>
       <v-toolbar-items>
@@ -20,6 +22,8 @@
 
       <router-view/>
     </v-content>
+      </div>
+
   </v-app>
 </template>
 

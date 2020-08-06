@@ -1,4 +1,7 @@
 <template>
+<div       class="card-image"
+ :style="{'background-image': 'url(' + require('@/assets/images/background.jpg') + ')'}">
+
   <main>
     <br/>
     <v-container fluid ma-0 pa-0 fill-height>
@@ -66,7 +69,7 @@
       </v-layout>
     </v-container>
   </main>
-
+  </div>
 </template>
 
 <script>
