@@ -19,19 +19,19 @@
        <v-alert v-if="showMsg === 'new'"
                 dismissible
         :value="true"
-        type="success"
+        type="info" 
       >
         New Stock has been added.
       </v-alert>
       <v-alert v-if="showMsg === 'update'" dismissible
         :value="true"
-        type="success"
+        type="info" 
       >
         Stock information has been updated.
       </v-alert>
          <v-alert v-if="showMsg === 'deleted'" dismissible
         :value="true"
-        type="success"
+        type="info" 
       >
         Selected Stock has been deleted.
       </v-alert>
@@ -59,10 +59,10 @@
           <td nowrap="true">{{ props.item.purchase_price }}</td>
           <td nowrap="true">{{ props.item.purchase_date }}</td>
           <td nowrap="true">
-            <v-icon @click="updateStock(props.item)">edit</v-icon>
+            <v-icon color="blue" @click="updateStock(props.item)">edit</v-icon>
           </td>
           <td nowrap="true">
-            <v-icon @click="deleteStock(props.item)">delete</v-icon>
+            <v-icon color="blue" @click="deleteStock(props.item)">delete</v-icon>
           </td>
 
         </template>
@@ -153,7 +153,7 @@
             }
             alert("Stock deleted");
             this.showMsg = 'deleted';
-            this.$router.go();
+            router.push("/stock-list");
 }
         }).catch(error => {
           if (error.response.status === 401) {

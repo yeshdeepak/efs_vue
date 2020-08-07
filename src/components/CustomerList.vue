@@ -18,19 +18,19 @@
        <v-alert v-if="showMsg === 'new'"
                 dismissible
         :value="true"
-        type="success"
+        type="info" 
       >
         New customer has been added.
       </v-alert>
       <v-alert v-if="showMsg === 'update'" dismissible
         :value="true"
-        type="success"
+        type="info" 
       >
         Customer information has been updated.
       </v-alert>
          <v-alert v-if="showMsg === 'deleted'" dismissible
         :value="true"
-        type="success"
+        type="info" 
       >
         Selected Customer has been deleted.
       </v-alert>
@@ -60,10 +60,11 @@
           <td nowrap="true">{{ props.item.email }}</td>
           <td nowrap="true">{{ props.item.cell_phone }}</td>
           <td nowrap="true">
-            <v-icon @click="updateCustomer(props.item)">edit</v-icon>
+            <v-icon color="blue"  @click="updateCustomer(props.item)">edit</v-icon>
           </td>
           <td nowrap="true">
-            <v-icon @click="deleteCustomer(props.item)">delete</v-icon>
+
+            <v-icon color="blue"  @click="deleteCustomer(props.item)">delete</v-icon>
           </td>
 
         </template>
@@ -73,7 +74,7 @@
       </v-layout>
       </v-container>
 
-      <v-btn class="blue white--text" @click="addNewCustomer">Add Customer</v-btn>
+      <v-btn class="blue white--text text-right" @click="addNewCustomer">Add Customer</v-btn>
     </v-container>
 
   </main>

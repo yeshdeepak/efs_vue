@@ -6,7 +6,7 @@
       <v-layout column align-center>
         <v-card  class="mx-auto" color="#26c6da" dark max-width="800">  
           <v-card-title>
-            <v-icon large  left > mdi-twitter </v-icon>
+            <v-icon large  left > </v-icon>
               <span class="title font-weight-bold">Welcome {{validUserName}}!</span>
           </v-card-title>
          <v-card-text class="headline font-weight-light">
@@ -22,8 +22,9 @@
       <v-layout justify-center row>
         <v-flex xs12 sm6>
           <v-card>
-            <v-container
+            <v-container class="blue darken-4" 
               fluid
+          
               grid-list-md
             >
               <v-layout row>
@@ -34,7 +35,7 @@
                     </v-img>
 
                     <v-card-actions>
-                      <v-btn flat color="orange" @click="viewCustomers">View Details</v-btn>
+                      <v-btn flat color="blue" @click="viewCustomers">View Details</v-btn>
                     </v-card-actions>
                   </v-card>
                 </v-flex>
@@ -46,7 +47,7 @@
                     </v-img>
 
                     <v-card-actions>
-                      <v-btn flat color="orange" @click="viewInvestments">View Details</v-btn>
+                      <v-btn flat color="blue" @click="viewInvestments">View Details</v-btn>
                     </v-card-actions>
                   </v-card>
                 </v-flex>
@@ -57,7 +58,7 @@
                     </v-img>
 
                     <v-card-actions>
-                      <v-btn flat color="orange" @click="viewStocks">View Details</v-btn>
+                      <v-btn flat color="blue" @click="viewStocks">View Details</v-btn>
                     </v-card-actions>
                   </v-card>
                 </v-flex>

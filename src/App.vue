@@ -9,7 +9,7 @@
 }">
 
  
-      <v-toolbar class="grey">
+      <v-toolbar class="blue darken-4">
       <v-toolbar-title >Eagle Finance Service</v-toolbar-title>
       <v-toolbar-items>
         <v-btn flat dark @click="goHome">Home</v-btn>
